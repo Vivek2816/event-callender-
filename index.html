@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Scheduler</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="event-scheduler-container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <h1>Event Scheduler</h1>
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="calendar-section">
+                <div id="calendar"></div>
+            </div>
+            
+            <button id="addEventBtn" class="btn primary">Add Event</button>
+
+            <div id="eventForm" class="hidden">
+                <h2 class="form-title">Add Event</h2>
+                <form id="eventFormDetails">
+                    <input type="text" id="eventTitle" placeholder="Event Title" required>
+                    <input type="datetime-local" id="eventDate" required>
+                    <textarea id="eventDesc" placeholder="Event Description"></textarea>
+                    <div class="button-container">
+                        <button type="submit" id="saveEventBtn" class="btn primary">Save Event</button>
+                        <button type="button" id="cancelBtn" class="btn secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Event Scheduler. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
